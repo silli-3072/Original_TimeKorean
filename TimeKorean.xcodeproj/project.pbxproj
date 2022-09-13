@@ -13,6 +13,14 @@
 		8223750028D0366700616E1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822374FE28D0366700616E1E /* Main.storyboard */; };
 		8223750228D0366800616E1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8223750128D0366800616E1E /* Assets.xcassets */; };
 		8223750528D0366800616E1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8223750328D0366800616E1E /* LaunchScreen.storyboard */; };
+		8223750D28D0385F00616E1E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8223750C28D0385F00616E1E /* HomeViewController.swift */; };
+		8223750F28D0386C00616E1E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8223750E28D0386C00616E1E /* GameViewController.swift */; };
+		8223751128D0387D00616E1E /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8223751028D0387D00616E1E /* ResultViewController.swift */; };
+		8223751328D0388800616E1E /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8223751228D0388800616E1E /* WordViewController.swift */; };
+		8223751528D0388F00616E1E /* AddWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8223751428D0388F00616E1E /* AddWordViewController.swift */; };
+		82CC857828D04A8D002FF35B /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC857728D04A8D002FF35B /* Word.swift */; };
+		82CC857B28D04DAA002FF35B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 82CC857A28D04DAA002FF35B /* Realm */; };
+		82CC857D28D04DAA002FF35B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 82CC857C28D04DAA002FF35B /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,12 @@
 		8223750128D0366800616E1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8223750428D0366800616E1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8223750628D0366800616E1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8223750C28D0385F00616E1E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8223750E28D0386C00616E1E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		8223751028D0387D00616E1E /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		8223751228D0388800616E1E /* WordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
+		8223751428D0388F00616E1E /* AddWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordViewController.swift; sourceTree = "<group>"; };
+		82CC857728D04A8D002FF35B /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82CC857D28D04DAA002FF35B /* RealmSwift in Frameworks */,
+				82CC857B28D04DAA002FF35B /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +76,12 @@
 				822374FA28D0366700616E1E /* SceneDelegate.swift */,
 				822374FC28D0366700616E1E /* ViewController.swift */,
 				822374FE28D0366700616E1E /* Main.storyboard */,
+				82CC857728D04A8D002FF35B /* Word.swift */,
+				8223750C28D0385F00616E1E /* HomeViewController.swift */,
+				8223750E28D0386C00616E1E /* GameViewController.swift */,
+				8223751028D0387D00616E1E /* ResultViewController.swift */,
+				8223751228D0388800616E1E /* WordViewController.swift */,
+				8223751428D0388F00616E1E /* AddWordViewController.swift */,
 				8223750128D0366800616E1E /* Assets.xcassets */,
 				8223750328D0366800616E1E /* LaunchScreen.storyboard */,
 				8223750628D0366800616E1E /* Info.plist */,
@@ -83,6 +105,10 @@
 			dependencies = (
 			);
 			name = TimeKorean;
+			packageProductDependencies = (
+				82CC857A28D04DAA002FF35B /* Realm */,
+				82CC857C28D04DAA002FF35B /* RealmSwift */,
+			);
 			productName = TimeKorean;
 			productReference = 822374F528D0366700616E1E /* TimeKorean.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +137,9 @@
 				Base,
 			);
 			mainGroup = 822374EC28D0366700616E1E;
+			packageReferences = (
+				82CC857928D04DAA002FF35B /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 822374F628D0366700616E1E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +167,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8223750F28D0386C00616E1E /* GameViewController.swift in Sources */,
 				822374FD28D0366700616E1E /* ViewController.swift in Sources */,
+				82CC857828D04A8D002FF35B /* Word.swift in Sources */,
+				8223751528D0388F00616E1E /* AddWordViewController.swift in Sources */,
+				8223751328D0388800616E1E /* WordViewController.swift in Sources */,
 				822374F928D0366700616E1E /* AppDelegate.swift in Sources */,
 				822374FB28D0366700616E1E /* SceneDelegate.swift in Sources */,
+				8223750D28D0385F00616E1E /* HomeViewController.swift in Sources */,
+				8223751128D0387D00616E1E /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +393,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		82CC857928D04DAA002FF35B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		82CC857A28D04DAA002FF35B /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 82CC857928D04DAA002FF35B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		82CC857C28D04DAA002FF35B /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 82CC857928D04DAA002FF35B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 822374ED28D0366700616E1E /* Project object */;
 }

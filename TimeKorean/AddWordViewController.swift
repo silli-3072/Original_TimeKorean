@@ -22,6 +22,16 @@ class AddWordViewController: UIViewController {
     }
     
     @IBAction func saveButton() {
+        let word = Word()
+        word.japanese = japaneseTextfield.text!
+        word.korean = koreanTextfield.text!
+        
+        try! realm.write {
+            realm.add(word)
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+        //self.navigationController?.popToRootViewController(animated: true)
         
     }
     

@@ -8,8 +8,8 @@
 import Foundation
 import RealmSwift
 
-class ToDo: Object {
+class Word: Object {
     @objc dynamic var japanese: String = ""
-    @objc dynamic var Korean: String = ""
+    @objc dynamic var korean: String = ""
     
 }

@@ -69,12 +69,28 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordCell" id="n4c-Fc-twQ">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordCell" rowHeight="100" id="n4c-Fc-twQ">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n4c-Fc-twQ" id="0Yj-Jh-61r">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frH-gP-pyP">
+                                                    <rect key="frame" x="28" y="55" width="359" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8D-wB-ryb">
+                                                    <rect key="frame" x="28" y="2" width="359" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -95,6 +111,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="japaneseLabel" destination="U8D-wB-ryb" id="q7B-Ke-zXv"/>
+                        <outlet property="koreanLabel" destination="frH-gP-pyP" id="xj6-63-0JI"/>
                         <outlet property="wordTableView" destination="i8m-qk-fyr" id="fzF-Iz-DNj"/>
                     </connections>
                 </viewController>
@@ -237,6 +255,17 @@
                         <viewLayoutGuide key="safeArea" id="XSs-wh-ZLn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="questionLabel" destination="qq4-Aj-oLU" id="aI8-TA-3BS"/>
+                        <outlet property="quizButton1" destination="fLA-fb-N6c" id="k9Z-Qg-ylt"/>
+                        <outlet property="quizButton2" destination="CLh-4k-CWx" id="UXT-Mg-vmZ"/>
+                        <outlet property="quizButton3" destination="0O5-a3-aRS" id="jWk-43-ede"/>
+                        <outlet property="quizButton4" destination="E9L-W7-Lrx" id="XZ1-2F-cXx"/>
+                        <outlet property="quizButton5" destination="QrM-8M-3Ch" id="4hK-E8-41E"/>
+                        <outlet property="quizButton6" destination="Hhb-RB-8wx" id="ggS-mU-uaM"/>
+                        <outlet property="scoreLabel" destination="SZr-S2-sfL" id="Y4a-UW-CMd"/>
+                        <outlet property="timerLabel" destination="BsB-rs-ndD" id="xV1-hV-dld"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LbH-ba-hOW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

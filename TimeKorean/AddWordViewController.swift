@@ -30,7 +30,7 @@ class AddWordViewController: UIViewController {
             realm.add(word)
         }
         
-        self.dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
         //self.navigationController?.popToRootViewController(animated: true)
         
     }

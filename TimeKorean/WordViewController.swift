@@ -14,6 +14,9 @@ class WordViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet var wordTableView: UITableView!
     
+    @IBOutlet var japaneseLabel: UILabel!
+    @IBOutlet var koreanLabel: UILabel!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,8 +39,11 @@ class WordViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "WordCell", for: indexPath)
         let userData = realm.objects(Word.self)
         
-        cell.textLabel!.text = "日本語：\(userData[indexPath.row].japanese)"
-        cell.textLabel!.text = "韓国語：\(userData[indexPath.row].korean)"
+        //cell.textLabel!.text = "日本語：\(userData[indexPath.row].japanese)"
+        //cell.textLabel!.text = "韓国語：\(userData[indexPath.row].korean)"
+        
+        japaneseLabel.text = "日本語：\(userData[indexPath.row].japanese)"
+        koreanLabel.text = "韓国語：\(userData[indexPath.row].korean)"
         
         cell.textLabel?.numberOfLines=0
         

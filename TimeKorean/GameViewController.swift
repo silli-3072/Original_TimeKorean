@@ -6,8 +6,25 @@
 //
 
 import UIKit
+import RealmSwift
 
 class GameViewController: UIViewController {
+    
+    let realm = try! Realm()
+    let userData = realm.objects(Word.self)
+    
+    @IBOutlet var questionLabel: UILabel!
+    @IBOutlet var timerLabel: UILabel!
+    @IBOutlet var scoreLabel: UILabel!
+    
+    @IBOutlet var quizButton1: UIButton!
+    @IBOutlet var quizButton2: UIButton!
+    @IBOutlet var quizButton3: UIButton!
+    @IBOutlet var quizButton4: UIButton!
+    @IBOutlet var quizButton5: UIButton!
+    @IBOutlet var quizButton6: UIButton!
+    
+    var quizNumber = Int.random(in: userData)
 
     override func viewDidLoad() {
         super.viewDidLoad()

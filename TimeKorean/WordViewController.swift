@@ -16,7 +16,7 @@ class WordViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet var japaneseLabel: UILabel!
     @IBOutlet var koreanLabel: UILabel!
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,6 +49,19 @@ class WordViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
         
+    }
+
+    //55行目までラベルを二つにしたくの実装。うまくいってない。
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let userData = realm.objects(Word.self)
+        
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "WordCell") as! TableViewCell
+            cell.japaneseLabel.text = "日本語：\(userData[indexPath.row].japanese)"
+            cell.koreanLabel.text = "韓国語：\(userData[indexPath.row].korean)"
+            return cell
+        }
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

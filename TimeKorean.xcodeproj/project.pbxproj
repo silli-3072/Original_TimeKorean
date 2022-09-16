@@ -21,7 +21,8 @@
 		82CC857828D04A8D002FF35B /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC857728D04A8D002FF35B /* Word.swift */; };
 		82CC857B28D04DAA002FF35B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 82CC857A28D04DAA002FF35B /* Realm */; };
 		82CC857D28D04DAA002FF35B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 82CC857C28D04DAA002FF35B /* RealmSwift */; };
-		82CC858128D2F335002FF35B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC858028D2F335002FF35B /* TableViewCell.swift */; };
+		82CC858428D4124D002FF35B /* WordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC858228D4124D002FF35B /* WordTableViewCell.swift */; };
+		82CC858528D4124D002FF35B /* WordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82CC858328D4124D002FF35B /* WordTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +40,8 @@
 		8223751228D0388800616E1E /* WordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
 		8223751428D0388F00616E1E /* AddWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordViewController.swift; sourceTree = "<group>"; };
 		82CC857728D04A8D002FF35B /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
-		82CC858028D2F335002FF35B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		82CC858228D4124D002FF35B /* WordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTableViewCell.swift; sourceTree = "<group>"; };
+		82CC858328D4124D002FF35B /* WordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,12 +80,13 @@
 				822374FA28D0366700616E1E /* SceneDelegate.swift */,
 				822374FC28D0366700616E1E /* ViewController.swift */,
 				822374FE28D0366700616E1E /* Main.storyboard */,
-				82CC858028D2F335002FF35B /* TableViewCell.swift */,
 				82CC857728D04A8D002FF35B /* Word.swift */,
 				8223750C28D0385F00616E1E /* HomeViewController.swift */,
 				8223750E28D0386C00616E1E /* GameViewController.swift */,
 				8223751028D0387D00616E1E /* ResultViewController.swift */,
 				8223751228D0388800616E1E /* WordViewController.swift */,
+				82CC858228D4124D002FF35B /* WordTableViewCell.swift */,
+				82CC858328D4124D002FF35B /* WordTableViewCell.xib */,
 				8223751428D0388F00616E1E /* AddWordViewController.swift */,
 				8223750128D0366800616E1E /* Assets.xcassets */,
 				8223750328D0366800616E1E /* LaunchScreen.storyboard */,
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8223750528D0366800616E1E /* LaunchScreen.storyboard in Resources */,
+				82CC858528D4124D002FF35B /* WordTableViewCell.xib in Resources */,
 				8223750228D0366800616E1E /* Assets.xcassets in Resources */,
 				8223750028D0366700616E1E /* Main.storyboard in Resources */,
 			);
@@ -175,11 +179,11 @@
 				82CC857828D04A8D002FF35B /* Word.swift in Sources */,
 				8223751528D0388F00616E1E /* AddWordViewController.swift in Sources */,
 				8223751328D0388800616E1E /* WordViewController.swift in Sources */,
-				82CC858128D2F335002FF35B /* TableViewCell.swift in Sources */,
 				822374F928D0366700616E1E /* AppDelegate.swift in Sources */,
 				822374FB28D0366700616E1E /* SceneDelegate.swift in Sources */,
 				8223750D28D0385F00616E1E /* HomeViewController.swift in Sources */,
 				8223751128D0387D00616E1E /* ResultViewController.swift in Sources */,
+				82CC858428D4124D002FF35B /* WordTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

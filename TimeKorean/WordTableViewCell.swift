@@ -6,15 +6,26 @@
 //
 
 import UIKit
+import RealmSwift
 
 class WordTableViewCell: UITableViewCell {
+    
+    let realm = try! Realm()
     
     @IBOutlet var japaneseLabel: UILabel!
     @IBOutlet var koreanLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        let userData = realm.objects(Word.self)
+        
+    }
+    
+    func configureCell(japanese:String, korean:String){
+        japaneseLabel.text = japanese
+        koreanLabel.text = korean
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

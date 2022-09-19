@@ -16,9 +16,7 @@ class WordViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        wordTableView.register(UINib(nibName: "WordTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
-        }
-
+        wordTableView.register(UINib(nibName: "WordTableViewCell", bundle: nil), forCellReuseIdentifier: "WordCell")
         
         // Do any additional setup after loading the view.
     }
@@ -33,27 +31,42 @@ class WordViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let userData = realm.objects(Word.self)
         return userData.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "WordCell", for: indexPath)
+        let cell: WordTableViewCell = tableView.dequeueReusableCell(withIdentifier: "WordCell", for: indexPath) as! WordTableViewCell
+        
         let userData = realm.objects(Word.self)
-        
-        //cell.textLabel!.text = "日本語：\(userData[indexPath.row].japanese)"
-        //cell.textLabel!.text = "韓国語：\(userData[indexPath.row].korean)"
-        
-        //japaneseLabel.text = "日本語：\(userData[indexPath.row].japanese)"
-        //koreanLabel.text = "韓国語：\(userData[indexPath.row].korean)"
-        
-        cell.textLabel?.numberOfLines=0
-        
+        cell.configureCell(japanese: userData[indexPath.row].japanese, korean: userData[indexPath.row].korean)
+
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let userData = realm.objects(Word.self)
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [self] (action, view, completionHandler) in
+            
+            let item = userData[indexPath.row]
+            
+            try! realm.write {
+                self.realm.delete(item)
+            }
+            
+            tableView.reloadData()
+            
+            completionHandler(true)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 50
+        
     }
     
     

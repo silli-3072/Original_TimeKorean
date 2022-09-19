@@ -8,11 +8,27 @@
 import UIKit
 
 class ResultViewController: UIViewController {
+    
+    @IBOutlet var restartButton: UIButton!
+    @IBOutlet var homeButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.restartButton.layer.cornerRadius = 30
+        self.homeButton.layer.cornerRadius = 30
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func restartButtonTapped() {
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func homeButtonTapped() {
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true)
+        
     }
     
 

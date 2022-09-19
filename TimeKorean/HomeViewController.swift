@@ -8,9 +8,15 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    @IBOutlet var gameButton: UIButton!
+    @IBOutlet var wordButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.gameButton.layer.cornerRadius = 30
+        self.wordButton.layer.cornerRadius = 30
 
         // Do any additional setup after loading the view.
     }

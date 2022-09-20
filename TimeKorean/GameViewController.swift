@@ -54,6 +54,15 @@ class GameViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "Result" {
+            let nextView = segue.destination as! ResultViewController
+            
+            nextView.score = scoreLabel.text!
+        }
+    }
+    
     func timeraction() {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (timer) in
             self.time -= 1
@@ -74,7 +83,7 @@ class GameViewController: UIViewController {
         
         checkAnswer(text: buttonText1)
         generationQuiz()
-            
+        
     }
     
     @IBAction func quizButton2Tapped() {
@@ -112,7 +121,7 @@ class GameViewController: UIViewController {
     @IBAction func quizButton6Tapped() {
         let buttonText6 = quizButton6.currentTitle!
         
-       checkAnswer(text: buttonText6)
+        checkAnswer(text: buttonText6)
         generationQuiz()
         
     }

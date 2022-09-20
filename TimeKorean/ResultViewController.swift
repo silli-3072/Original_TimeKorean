@@ -9,11 +9,17 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
+    @IBOutlet var scoreLabel: UILabel!
+    
     @IBOutlet var restartButton: UIButton!
     @IBOutlet var homeButton: UIButton!
+    
+    var score = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scoreLabel.text = score
         
         self.restartButton.layer.cornerRadius = 30
         self.homeButton.layer.cornerRadius = 30

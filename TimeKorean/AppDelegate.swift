@@ -14,7 +14,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         print("🤹",Realm.Configuration.defaultConfiguration.fileURL)
-        // Override point for customization after application launch.
+        
+        let defaultRealmPath = Realm.Configuration.defaultConfiguration.fileURL!
+
+        let bundleRealmPath = Bundle.main.url(forResource: "default.realm", withExtension: "realm")
+
+        if !FileManager.default.fileExists(atPath: defaultRealmPath.path) {
+          do {
+            try FileManager.default.copyItem(at: bundleRealmPath!, to: defaultRealmPath)
+          } catch let error {
+              print("error: \(error)")
+            }
+        }
+
         return true
     }
 
@@ -31,23 +43,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-      let defaultRealmPath = Realm.Configuration.defaultConfiguration.fileURL!
-
-      let bundleRealmPath = Bundle.main.url(forResource: "default", withExtension: "realm")
-
-      if !FileManager.default.fileExists(atPath: defaultRealmPath.path) {
-        do {
-          try FileManager.default.copyItem(at: bundleRealmPath!, to: defaultRealmPath)
-        } catch let error {
-            print("error: \(error)")
-          }
-      }
-
-      return true
-    }
-
 
 }
 

@@ -42,6 +42,7 @@
 		82CC857728D04A8D002FF35B /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		82CC858228D4124D002FF35B /* WordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTableViewCell.swift; sourceTree = "<group>"; };
 		82CC858328D4124D002FF35B /* WordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordTableViewCell.xib; sourceTree = "<group>"; };
+		82CC858928DAEF35002FF35B /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = default.realm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +77,7 @@
 		822374F728D0366700616E1E /* TimeKorean */ = {
 			isa = PBXGroup;
 			children = (
+				82CC858928DAEF35002FF35B /* default.realm */,
 				822374F828D0366700616E1E /* AppDelegate.swift */,
 				822374FA28D0366700616E1E /* SceneDelegate.swift */,
 				822374FC28D0366700616E1E /* ViewController.swift */,

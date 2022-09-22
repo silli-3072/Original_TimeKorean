@@ -23,6 +23,7 @@
 		82CC857D28D04DAA002FF35B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 82CC857C28D04DAA002FF35B /* RealmSwift */; };
 		82CC858428D4124D002FF35B /* WordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC858228D4124D002FF35B /* WordTableViewCell.swift */; };
 		82CC858528D4124D002FF35B /* WordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82CC858328D4124D002FF35B /* WordTableViewCell.xib */; };
+		82CC858C28DBF400002FF35B /* default.realm in Resources */ = {isa = PBXBuildFile; fileRef = 82CC858B28DBF400002FF35B /* default.realm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +43,7 @@
 		82CC857728D04A8D002FF35B /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		82CC858228D4124D002FF35B /* WordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTableViewCell.swift; sourceTree = "<group>"; };
 		82CC858328D4124D002FF35B /* WordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordTableViewCell.xib; sourceTree = "<group>"; };
-		82CC858928DAEF35002FF35B /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = default.realm; sourceTree = "<group>"; };
+		82CC858B28DBF400002FF35B /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; name = default.realm; path = TimeKorean/default.realm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +62,7 @@
 		822374EC28D0366700616E1E = {
 			isa = PBXGroup;
 			children = (
+				82CC858B28DBF400002FF35B /* default.realm */,
 				822374F728D0366700616E1E /* TimeKorean */,
 				822374F628D0366700616E1E /* Products */,
 			);
@@ -77,7 +79,6 @@
 		822374F728D0366700616E1E /* TimeKorean */ = {
 			isa = PBXGroup;
 			children = (
-				82CC858928DAEF35002FF35B /* default.realm */,
 				822374F828D0366700616E1E /* AppDelegate.swift */,
 				822374FA28D0366700616E1E /* SceneDelegate.swift */,
 				822374FC28D0366700616E1E /* ViewController.swift */,
@@ -162,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82CC858C28DBF400002FF35B /* default.realm in Resources */,
 				8223750528D0366800616E1E /* LaunchScreen.storyboard in Resources */,
 				82CC858528D4124D002FF35B /* WordTableViewCell.xib in Resources */,
 				8223750228D0366800616E1E /* Assets.xcassets in Resources */,

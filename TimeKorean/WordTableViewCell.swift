@@ -18,8 +18,6 @@ class WordTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let userData = realm.objects(Word.self)
-        
     }
     
     func configureCell(japanese:String, korean:String){

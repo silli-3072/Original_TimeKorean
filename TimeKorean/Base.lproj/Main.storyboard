@@ -29,7 +29,8 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="krW-XT-hQx" kind="presentation" id="nP2-Cs-8vi"/>
+                                    <action selector="tapGameButton" destination="BYZ-38-t0r" eventType="touchDown" id="fA2-hp-qIU"/>
+                                    <segue destination="krW-XT-hQx" kind="presentation" identifier="toGame" id="nP2-Cs-8vi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92g-Rc-jF1">
@@ -45,7 +46,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="fcr-ke-uEg" kind="show" id="XGz-jA-Puo"/>
+                                    <segue destination="fcr-ke-uEg" kind="show" identifier="WordView" id="XGz-jA-Puo"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="3fa-qN-AZZ">

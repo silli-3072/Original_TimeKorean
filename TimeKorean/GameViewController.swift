@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 import RealmSwift
 
 class GameViewController: UIViewController {
@@ -29,6 +30,9 @@ class GameViewController: UIViewController {
     var answer = ""
     
     var score = 0
+    
+    let goodSound = try!AVAudioPlayer(data: NSDataAsset(name: "good")!.data)
+    let budSound = try!AVAudioPlayer(data: NSDataAsset(name: "bud")!.data)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -132,6 +136,7 @@ class GameViewController: UIViewController {
         let randomValue = userData.randomElement()
         
         answer = randomValue!.korean
+        print("🍑",answer)
         
         let choiceValue1 = userData.randomElement()
         let choiceValue2 = userData.randomElement()
@@ -152,23 +157,32 @@ class GameViewController: UIViewController {
         
     }
     
-    func updateGame() {
-        if time <= 0 {
-            time = 0
-            self.performSegue(withIdentifier: "Result", sender: nil)
-        }
-    }
-    
     func checkAnswer(text: String) {
         if text == answer {
             score = score + 10
             scoreLabel.text = "\(score)"
+            
+            goodSound.currentTime = 0
+            goodSound.play()
+            
         } else {
-            time = time - 2
+            time = time - 1
             self.timerLabel.text = String(self.time)
+            
+            budSound.currentTime = 0
+            budSound.play()
             
             updateGame()
             
+            Thread.sleep(forTimeInterval: 1.0)
+        }
+    }
+    
+    func updateGame() {
+        if time <= 0 {
+            time = 0
+            scoreLabel.text = "\(score)"
+            self.performSegue(withIdentifier: "Result", sender: nil)
         }
     }
     

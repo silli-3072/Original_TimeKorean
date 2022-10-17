@@ -174,7 +174,7 @@ class GameViewController: UIViewController {
             
             updateGame()
             
-            Thread.sleep(forTimeInterval: 1.0)
+            //Thread.sleep(forTimeInterval: 1.0)
         }
     }
     
